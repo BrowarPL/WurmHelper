@@ -141,8 +141,9 @@ public class ImproverBot extends Bot {
                             }
                         }
 
-                        if (itemToImprove.getDamage() > 0)
+                        if (itemToImprove.getDamage() > 0) {
                             Mod.hud.sendAction(PlayerAction.REPAIR, itemToImprove.getId());
+                        }
                         improveActionFinished = false;
                         improveInitiated = true;
                         Mod.hud.getWorld().getServerConnection().sendAction(tool.itemId,
@@ -183,6 +184,8 @@ public class ImproverBot extends Bot {
 
                     improveActionFinished = false;
                     Mod.hud.sendAction(PlayerAction.REPAIR, pickableUnit.getId());
+                    sleep(500);
+
                     for (Tool tool : getToolsBySkill(toolSkill)) {
                         if (tool.itemId == 0 || !tool.fixed) {
                             //process metal lumps
@@ -311,6 +314,7 @@ public class ImproverBot extends Bot {
                         || message.contains("has some dents that must be flattened")
                         || message.contains("dipping it in water")
                         || message.contains("doesn't need repairing")
+                        || message.contains("You need to polish")
                         || message.contains("You repair the"),
                 () -> improveActionFinished = true);
     }

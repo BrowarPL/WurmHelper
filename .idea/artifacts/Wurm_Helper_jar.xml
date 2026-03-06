@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Wurm Helper:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Wurm_Helper_jar</output-path>
+    <root id="archive" name="Wurm Helper.jar">
+      <element id="module-output" name="Wurm Helper" />
+    </root>
+  </artifact>
+</component>
