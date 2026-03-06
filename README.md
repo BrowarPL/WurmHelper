@@ -20,4 +20,6 @@ type "info" in game console to see the list of available commands
   6) Automatic item improving
   7) Another various things, making the gameplay easier
   
-  Forked and will be updated by me.
+  Forked and will be updated by BrowaR.
+
+  Original creator: IldarW
